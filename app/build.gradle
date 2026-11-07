@@ -17,11 +17,26 @@ android {
         }
     }
 
+    // 서명 키 정보는 저장소가 아닌 %USERPROFILE%\.gradle\gradle.properties 에 둔다.
+    // (scripts\create-signing-key.bat 가 키를 만들고 이 값들을 써 준다)
+    def hasReleaseKey = project.hasProperty('MC_STORE_FILE')
+
+    signingConfigs {
+        release {
+            if (hasReleaseKey) {
+                storeFile file(MC_STORE_FILE)
+                storePassword MC_STORE_PASSWORD
+                keyAlias MC_KEY_ALIAS
+                keyPassword MC_KEY_PASSWORD
+            }
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
-            // 디버그 키로 서명해서 바로 설치 가능하게 함 (배포용이면 자체 키로 교체)
-            signingConfig signingConfigs.debug
+            // 키 설정이 있으면 전용 키, 없으면(다른 PC·CI) 디버그 키로 서명
+            signingConfig hasReleaseKey ? signingConfigs.release : signingConfigs.debug
         }
     }
 
