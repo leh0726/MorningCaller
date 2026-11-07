@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="icon_bg">#FF2FA84F</color>
+    <!-- SE 9.0 기본 앱 배경 / 강조색 (실기기 화면에서 측정) -->
+    <color name="se_background">#FFFAFAFA</color>
+    <color name="se_accent">#FF499EBD</color>
+</resources>

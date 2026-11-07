@@ -1,0 +1,32 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.w401.morningcaller'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'com.w401.morningcaller'
+        minSdk 26          // Android 8.0
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+        ndk {
+            abiFilters 'arm64-v8a'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            // 디버그 키로 서명해서 바로 설치 가능하게 함 (배포용이면 자체 키로 교체)
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}

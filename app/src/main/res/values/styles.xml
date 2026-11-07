@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- DeviceDefault: 삼성 기기에서는 Samsung Experience 기본 테마가 적용됨 -->
+    <style name="AppTheme" parent="@android:style/Theme.DeviceDefault.Light">
+        <!-- 기본 앱처럼 상태바를 화면 배경색과 맞추고 아이콘을 어둡게 -->
+        <item name="android:statusBarColor">@color/se_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/se_background</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>

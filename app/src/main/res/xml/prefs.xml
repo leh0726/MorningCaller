@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/cat_caller">
+        <EditTextPreference
+            android:dialogTitle="@string/pref_number"
+            android:inputType="phone"
+            android:key="number"
+            android:title="@string/pref_number" />
+        <EditTextPreference
+            android:dialogTitle="@string/pref_name"
+            android:inputType="textPersonName"
+            android:key="name"
+            android:title="@string/pref_name" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/cat_schedule">
+        <ListPreference
+            android:defaultValue="timer"
+            android:dialogTitle="@string/pref_mode"
+            android:entries="@array/mode_entries"
+            android:entryValues="@array/mode_values"
+            android:key="schedule_mode"
+            android:title="@string/pref_mode" />
+        <Preference
+            android:key="schedule_time"
+            android:persistent="false"
+            android:title="@string/pref_time" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/cat_call">
+        <Preference
+            android:key="audio"
+            android:persistent="false"
+            android:title="@string/pref_audio" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="hangup_after"
+            android:summary="@string/pref_hangup_summary"
+            android:title="@string/pref_hangup" />
+    </PreferenceCategory>
+</PreferenceScreen>

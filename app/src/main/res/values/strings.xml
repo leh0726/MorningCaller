@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 기본(영어). 한국어는 values-ko/strings.xml — 시스템 언어에 따라 자동 선택 -->
+<resources>
+    <string name="app_name" translatable="false">MorningCaller</string>
+    <string name="account_label" translatable="false">MorningCaller</string>
+
+    <string name="cat_caller">Caller</string>
+    <string name="cat_schedule">Schedule</string>
+    <string name="cat_call">Call</string>
+
+    <string name="pref_number">Phone number</string>
+    <string name="pref_name">Caller name</string>
+    <string name="pref_mode">Schedule type</string>
+    <string name="pref_time">Scheduled time</string>
+    <string name="pref_audio">Audio file to play when answered</string>
+    <string name="pref_hangup">End call after audio</string>
+    <string name="pref_hangup_summary">When the audio finishes, the call ends as if the caller hung up.</string>
+    <string name="not_set">Not set</string>
+    <string name="name_hint">Shown when the number isn\'t in your contacts</string>
+    <string name="timer_summary">In %1$s</string>
+
+    <string name="timer_dialog_title">Scheduled time (timer)</string>
+    <string name="unit_hour">Hours</string>
+    <string name="unit_minute">Minutes</string>
+    <string name="unit_second">Seconds</string>
+
+    <string name="immediately">Immediately</string>
+    <string name="fmt_hours">%1$d hr</string>
+    <string name="fmt_minutes">%1$d min</string>
+    <string name="fmt_seconds">%1$d sec</string>
+    <string name="tomorrow_at">Tomorrow %1$s</string>
+
+    <string name="call_now">Call now</string>
+    <string name="schedule">Schedule</string>
+    <string name="cancel_schedule">Cancel schedule</string>
+    <string name="scheduled">You\'ll get a call at %1$s.</string>
+    <string name="schedule_status">Call at %1$s · %2$s left</string>
+    <string name="schedule_canceled">Schedule canceled.</string>
+    <string name="calling_now">Incoming call…</string>
+    <string name="err_no_number">Enter a phone number.</string>
+    <string name="err_account_disabled">Turn on the MorningCaller calling account first.</string>
+    <string name="open_accounts_failed">Turn it on in Phone settings → Calling accounts.</string>
+
+    <string-array name="mode_entries">
+        <item>Timer</item>
+        <item>Specific time</item>
+    </string-array>
+    <string-array name="mode_values" translatable="false">
+        <item>timer</item>
+        <item>clock</item>
+    </string-array>
+</resources>
